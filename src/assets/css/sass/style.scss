@@ -1,0 +1,28 @@
+@use 'base';
+@use 'abstracts' as *;
+@use 'menu_lateral' as *;
+@use 'elements' ;
+body{
+    background: #f0f0f0;
+}
+
+
+
+#container{
+    min-height: 100vh;
+    background:#ccc;
+    display:flex;
+                    
+}
+
+#content{
+ display: grid;
+ grid-template-areas: "header header header header header header"
+                      "page   page   page   page   page   page"
+                      "footer footer footer footer footer footer";
+    border:1px solid #f90;
+    padding:30px;
+    background:#fff;
+ flex-grow: 1;
+ flex-shrink: 1;
+}

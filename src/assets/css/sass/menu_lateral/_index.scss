@@ -1,0 +1,13 @@
+
+#bg_menu_lateral{
+    flex-shrink: 1;
+    flex-grow: 1;
+       max-width: 400px;
+       background:#222;
+   }
+
+   @media (max-width: 800px){
+    #bg_menu_lateral{
+        max-width: 300px;
+    } 
+   }
