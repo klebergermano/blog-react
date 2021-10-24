@@ -1,12 +1,12 @@
 @use 'base';
 @use 'abstracts' as *;
-@use 'menu_lateral' as *;
+@use 'includes' as *;
+@use 'main_nav_aside' as *;
 @use 'elements' ;
+@use 'pages' ;
 body{
     background: #f0f0f0;
 }
-
-
 
 #container{
     min-height: 100vh;
@@ -20,9 +20,7 @@ body{
  grid-template-areas: "header header header header header header"
                       "page   page   page   page   page   page"
                       "footer footer footer footer footer footer";
-    border:1px solid #f90;
-    padding:30px;
-    background:#fff;
+ grid-template-rows: 60px auto 60px;
  flex-grow: 1;
  flex-shrink: 1;
 }

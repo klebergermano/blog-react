@@ -348,28 +348,86 @@ template {
   display: none;
 }
 
-#bg_menu_lateral {
+.author_avatar {
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+  margin: 20px auto;
+}
+.author_avatar figure {
+  border: 2px solid #f8d9aa;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  max-width: 100%;
+  background: #111;
+}
+.author_avatar figure img {
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.author_avatar .author_name h3 {
+  text-align: center;
+  color: #ccc;
+}
+
+#main_nav_aside {
   flex-shrink: 1;
   flex-grow: 1;
   max-width: 400px;
   background: #222;
 }
+#main_nav_aside nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main_nav_aside nav ul li {
+  min-width: 100%;
+  list-style: none;
+}
+#main_nav_aside nav ul li a {
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+#main_nav_aside nav ul li a:hover {
+  background: #292929;
+  border-right: 4px solid #fff;
+}
 
 @media (max-width: 800px) {
-  #bg_menu_lateral {
+  #main_nav_aside {
     max-width: 300px;
   }
 }
 header {
+  height: 60px;
   grid-area: header;
   background: #ccc;
   border-bottom: 1px solid #333;
 }
 
 footer {
+  height: 60px;
   grid-area: footer;
   background: #ccc;
   border-top: 1px solid #333;
+  margin-bottom: 0px;
+}
+
+.pages {
+  grid-area: page;
+  background: #f0f0f0;
 }
 
 body {
@@ -385,9 +443,7 @@ body {
 #content {
   display: grid;
   grid-template-areas: "header header header header header header" "page   page   page   page   page   page" "footer footer footer footer footer footer";
-  border: 1px solid #f90;
-  padding: 30px;
-  background: #fff;
+  grid-template-rows: 60px auto 60px;
   flex-grow: 1;
   flex-shrink: 1;
 }

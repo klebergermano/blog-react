@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 
 header{
+    height:60px;
     grid-area: header;
     background:#ccc;
     border-bottom:1px solid #333;
