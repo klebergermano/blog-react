@@ -1,0 +1,37 @@
+
+@use "../abstracts/" as *;
+#main_nav_aside{
+    flex-shrink: 1;
+    flex-grow: 1;
+       max-width: 400px;
+       background:#222;
+
+       nav{
+           ul 
+           {
+               display: flex;
+               flex-wrap: wrap;
+               li{
+                   min-width: 100%;
+                   list-style: none;
+               a{ color:#fff;
+                    padding:20px;
+                     text-decoration: none;
+                     display: block;
+                     font-size:18px;
+
+                     &:hover{
+                         background: lighten($dark-color, 6%);
+                         border-right: 4px solid #fff;
+                     }
+        }
+                }
+           }
+       }
+   }
+
+   @media (max-width: 800px){
+    #main_nav_aside{
+        max-width: 300px;
+    } 
+   }
